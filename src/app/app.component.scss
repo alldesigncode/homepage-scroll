@@ -1,0 +1,120 @@
+.main {
+  position: relative;
+
+  section.home {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: grid;
+    grid-template-rows: 130px 1fr 250px;
+
+    .top {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      align-items: center;
+      margin: 0 50px;
+
+      .logo {
+
+      }
+      .nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        .nav-item {
+          margin: 0 20px;
+        }
+
+        .nav-link {
+          padding: 8px 10px;
+        }
+      }
+      .right {
+        justify-self: end;
+      }
+    }
+
+    h1.heading-main {
+      display: grid;
+      align-items: center;
+      justify-content: start;
+      margin-left: 100px;
+      font-size: 75px;
+      width: 50%;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 200px;
+      .bottom-left {
+        flex: 0 0 auto;
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+       }
+      .bottom-right { flex: 0 0 25%; }
+    }
+
+  }
+
+  .content {
+    margin-top: 80vh;
+
+    section.scroll-content {
+      height: 100vh;
+      z-index: 100;
+    }
+
+    section.one {
+      .center-img {
+        display: grid;
+        height: inherit;
+        justify-content: center;
+        align-content: start;
+
+        figure.img {
+          width: 400px;
+          height: 600px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+        }
+
+        .img-text {
+          margin-top: 20px;
+          .bold { font-weight: bold; }
+        }
+      }
+    }
+    section.two {
+      background-color: blue;
+    }
+    section.three {
+      background-color: green;
+    }
+
+    section.four {
+      background-color: black;
+    }
+  }
+
+}
+
+
+// ::-webkit-scrollbar {
+//   width: 0px;  /* Remove scrollbar space */
+//   background: transparent;  /* Optional: just make scrollbar invisible */
+// }
+
