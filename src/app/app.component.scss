@@ -18,9 +18,6 @@
       align-items: center;
       margin: 0 50px;
 
-      .logo {
-
-      }
       .nav-list {
         list-style: none;
         display: flex;
@@ -29,11 +26,11 @@
         .nav-item {
           margin: 0 20px;
         }
-
         .nav-link {
           padding: 8px 10px;
         }
       }
+
       .right {
         justify-self: end;
       }
@@ -43,7 +40,7 @@
       display: grid;
       align-items: center;
       justify-content: start;
-      margin-left: 100px;
+      margin-left: 120px;
       font-size: 75px;
       width: 50%;
       font-weight: 600;
@@ -55,14 +52,17 @@
       align-items: center;
       justify-content: space-between;
       margin: 0 200px;
+
       .bottom-left {
         flex: 0 0 auto;
         border-bottom: 1px solid #000;
         padding-bottom: 10px;
-       }
-      .bottom-right { flex: 0 0 25%; }
-    }
+      }
 
+      .bottom-right {
+        flex: 0 0 25%;
+      }
+    }
   }
 
   .content {
@@ -74,47 +74,84 @@
     }
 
     section.one {
-      .center-img {
+      figure.img {
+        width: 400px;
+        height: 600px;
+      }
+    }
+
+    section.two {
+
+      figure.img {
+        filter: brightness(0.4);
+        margin: 0 auto;
+        width: 70%;
+        height: 800px;
+        transition: all 0.4s ease-in-out;
+      }
+
+      figure.active {
+        filter: brightness(1);
+      }
+      .img-text {
+        margin: 20px 15%;
+      }
+    }
+
+    section.three {
+      .heading-intro {
+        width: 50%;
+        padding: 120px;
+        margin: 0 auto;
+        font-size: 35px;
+        font-weight: 500;
+      }
+
+      .article {
         display: grid;
-        height: inherit;
-        justify-content: center;
-        align-content: start;
+        grid-template-columns: 1fr 60%;
+        grid-column-gap: 50px;
 
-        figure.img {
-          width: 400px;
-          height: 600px;
+        .left {
+          justify-self: end;
 
-          img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
+          figure {
+            width: 300px;
+            height: 450px;
           }
         }
 
-        .img-text {
-          margin-top: 20px;
-          .bold { font-weight: bold; }
+        .right {
+          .block {
+            width: 70%;
+            margin-bottom: 30px;
+            p {
+              margin-top: 30px;
+            }
+          }
         }
       }
     }
-    section.two {
-      background-color: blue;
-    }
-    section.three {
-      background-color: green;
-    }
-
-    section.four {
-      background-color: black;
-    }
   }
-
 }
 
+.center-img {
+  display: grid;
+  height: inherit;
+  justify-content: center;
+  align-content: start;
 
-// ::-webkit-scrollbar {
-//   width: 0px;  /* Remove scrollbar space */
-//   background: transparent;  /* Optional: just make scrollbar invisible */
-// }
+  .img-text {
+    margin-top: 20px;
+    .bold {
+      font-weight: bold;
+    }
+  }
+}
 
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
